@@ -34,8 +34,8 @@ public class InorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root != null) {
             inorderTraversal(root.left);
-            inorderTraversal(root.right);
             record.add(root.val);
+            inorderTraversal(root.right);
         }
         return record;
     }
