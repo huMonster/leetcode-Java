@@ -45,7 +45,9 @@ public class IsHappy {
 
     /**
      * 通过运算，得出非快乐数规律 1ms 36.7MB
+     *
      * @param n
+     * @return
      */
     public boolean isHappy2(int n) {
         int result = 0;
