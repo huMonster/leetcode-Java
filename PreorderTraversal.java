@@ -32,6 +32,30 @@ public class PreorderTraversal {
         }
     }
 
+    /**
+     * 非递归 -- 使用栈
+     *
+     * @param root
+     * @return
+     */
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        List<Integer> record = new ArrayList<>();
+        if(root == null) return record;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            root = stack.pop();
+            record.add(root.val);
+            if(root.right != null) {
+                stack.push(root.right);
+            }
+            if(root.left != null){
+                stack.push(root.left);
+            }
+
+        }
+        return record;
+    }
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2);
